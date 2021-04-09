@@ -1,0 +1,149 @@
+package TabletScanner;
+
+/**
+ *
+ * @author Chua Wee Chan 271948
+ */
+import java.util.Scanner;
+public class Tablet {
+    Scanner scan = new Scanner(System.in);
+    
+    //method to show the tablet brand and operating system
+    void tabletBrand(){
+        System.out.println("Please enter the tablet you purchased : ");
+        String b = scan.nextLine();
+        System.out.println("The Brand of the tablet you purchase is "+b+".");
+        if ("Apple iPad".equals(b)){
+            System.out.println("The Operating System for your "+b+" is iOS.");
+        }
+        else if("Huawei Mate Pad".equals(b)){
+            System.out.println("The Operating System for your "+b+" is EMUI.");
+        }
+        else if("Galaxy Tab Active 3".equals(b)){
+            System.out.println("The Operating System for your "+b+" is Android.");
+        }
+        else if(!b.equals("Apple iPad"+"Huawei Mate Pad"+"Galaxy Tab Active 3")){
+            System.out.println("Operating System Unknown!");
+        }
+           
+    }//end of method
+    
+    //method to show the price of the tablet and calculate the total price
+    void tabletPrice(){
+        System.out.println("\nPlease Enter the tablet you purchased : ");
+        String p = scan.nextLine();
+        System.out.println("The tablet you purchased is "+p+".");
+        if ("Apple iPad".equals(p)){
+            System.out.println("The price for your tablet is RM1499.");
+            
+            System.out.println("\nPlease enter the quantity you purchased : ");
+            int q = scan.nextInt();
+            int sum = q*1499;
+            System.out.println("The total price you spend is RM"+sum+".");
+        }
+        
+        else if("Huawei Mate Pad".equals(p)){
+            System.out.println("The price for your tablet is RM1389.");
+            
+            System.out.println("\nPlease enter the quantity you purchased : ");
+            int q = scan.nextInt();
+            int sum = q*1389;
+            System.out.println("The total price you spend is RM"+sum+".");
+        }
+        
+        else if("Galaxy Tab Active 3".equals(p)){
+            System.out.println("The price for your tablet is RM2070.");
+            
+            System.out.println("\nPlease enter the quantity you purchased : ");
+            int q = scan.nextInt();
+            int sum = q*2070;
+            System.out.println("The total price you spend is RM"+sum+".");
+        }
+        
+        else if(!p.equals("Apple iPad"+"Huawei Mate Pad"+"Galaxy Tab Active 3")){
+            System.out.println("Price Unknown!");
+        }
+    }//end of method
+    
+    //method to calulate the total weight for the purchased tablet.
+    void tabletWeight(){
+        System.out.println("\nPlease Enter the tablet you purchased : ");
+        String w = scan.nextLine();
+        System.out.println("The tablet you purchased is "+w+".");
+        if ("Apple iPad".equals(w)){
+            System.out.println("The weight for your tablet is 200gm.");
+            
+            System.out.println("\nPlease enter the quantity you purchased : ");
+            int quantity = scan.nextInt();
+            int sum = quantity*200;
+            System.out.println("The total price you spend is "+sum+"gm.");
+        }
+        
+        else if("Huawei Mate Pad".equals(w)){
+            System.out.println("The weight for your tablet is 180gm.");
+            
+            System.out.println("\nPlease enter the quantity you purchased : ");
+            int quantity = scan.nextInt();
+            int sum = quantity*180;
+            System.out.println("The total price you spend is "+sum+"gm.");
+        }
+        
+        else if("Galaxy Tab Active 3".equals(w)){
+            System.out.println("The weight for your tablet is 230gm.");
+            
+            System.out.println("\nPlease enter the quantity you purchased : ");
+            int quantity = scan.nextInt();
+            int sum = quantity*230;
+            System.out.println("The total price you spend is "+sum+"gm.");
+        }
+        
+        else if(!w.equals("Apple iPad"+"Huawei Mate Pad"+"Galaxy Tab Active 3")){
+            System.out.println("Weight Unknown!");
+        }
+    
+    }//end of method
+    
+    //method to perform calculation
+    void calculator(){
+        System.out.println("Enter the operation you wish to perform : (ADD/MINUS/TIMES/DEVIDE) ");
+        String operation = scan.nextLine();
+        
+        if ("ADD".equals(operation)){
+            System.out.println("Enter the value you want to sum up(MAX 3) : ");
+            int value1 = scan.nextInt();
+            int value2 = scan.nextInt();
+            int value3 = scan.nextInt();
+            int total = value1+value2+value3;
+
+            System.out.println(value1+"+"+value2+"+"+value3+"="+total);
+        }
+        else if ("MINUS".equals(operation)){
+            System.out.println("Enter the value you want to minus(MAX 3) : ");
+            int value1 = scan.nextInt();
+            int value2 = scan.nextInt();
+            int value3 = scan.nextInt();
+            int total = value1-value2-value3;
+
+            System.out.println(value1+"-"+value2+"-"+value3+"="+total);
+        }
+        else if ("TIMES".equals(operation)){
+            System.out.println("Enter the value you want to times(MAX 3) : ");
+            int value1 = scan.nextInt();
+            int value2 = scan.nextInt();
+            int value3 = scan.nextInt();
+            int total = value1*value2*value3;
+
+            System.out.println(value1+"x"+value2+"x"+value3+"="+total);
+        }
+        else if ("DEVIDE".equals(operation)){
+            System.out.println("Enter the value you want to devide(MAX 2) : ");
+            int value1 = scan.nextInt();
+            int value2 = scan.nextInt();
+            int total = (value1/value2);
+
+            System.out.println(value1+"/"+value2+"="+total);
+        }
+      }//end of method
+    }//end of class
+    
+    
