@@ -1,0 +1,22 @@
+package TabletScanner;
+
+/**
+ *
+ * @author Chua Wee Chan 271948
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Tablet purchasedTablet = new Tablet(); //CREATE AN OBJECT NAME AS purchasedTablet.
+        
+        purchasedTablet.tabletBrand();
+        purchasedTablet.tabletPrice();
+        purchasedTablet.tabletWeight();
+        purchasedTablet.calculator();
+        
+    }
+    
+}
